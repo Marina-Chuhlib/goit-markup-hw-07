@@ -685,7 +685,7 @@ nav {
   display: flex;
 }
 
-.team-list {
+.our-team__list {
   margin-right: 30px;
   justify-content: center;
   text-align: center;
@@ -693,7 +693,7 @@ nav {
   box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 1px rgba(0, 0, 0, 0.14), 0px 2px 1px rgba(0, 0, 0, 0.2);
   border-radius: 0px 0px 4px 4px;
 }
-.team-list:nth-child(4n) {
+.our-team__list:nth-child(4n) {
   margin-right: 0;
 }
 
@@ -743,7 +743,7 @@ nav {
   background-color: var(--accent-color);
 }
 
-.socials_lists {
+.socials-list__item {
   width: 44px;
   height: 44px;
   border-radius: 50%;
@@ -760,7 +760,7 @@ nav {
   fill: var(--primary-white-color);
 }
 
-.socials_lists:hover .social-list-link {
+.socials-list__item:hover .social-list-link {
   background-color: var(--accent-color);
   fill: var(--primary-white-color);
 }
