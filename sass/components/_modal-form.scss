@@ -8,9 +8,8 @@
 
   height: 23px;
 
-  font-weight: 700;
-  font-size: 20px;
-  line-height: 1.5;
+  @include font(20px, 700, 23px);
+
   letter-spacing: 0.03em;
 
   color: var(--title-text-color);

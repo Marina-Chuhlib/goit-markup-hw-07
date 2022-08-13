@@ -14,7 +14,7 @@ nav {
   align-items: center;
 }
 
-.nav-lists:not(:last-child) {
+.nav__lists:not(:last-child) {
   margin-right: 50px;
 }
 
@@ -34,11 +34,13 @@ nav {
   text-decoration: none;
   word-spacing: -6px;
 }
-.desc {
+
+.logo__desc {
   color: #000000;
   font-family: Raleway, sans-serif;
 }
-.nav-link {
+
+.nav__link {
   display: block;
   padding-top: 32px;
   padding-bottom: 32px;
@@ -47,27 +49,30 @@ nav {
   line-height: 1.14;
   letter-spacing: 0.02em;
   text-decoration: none;
-}
-.nav-link {
   cursor: pointer;
   transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 
-  &.current {
+  &:hover,
+  &:focus {
     color: var(--accent-color);
-    position: relative;
+    line-height: 1.14;
+    letter-spacing: 0.02em;
   }
 }
 
-.nav-link:hover,
 .contacts-link:hover,
-.nav-link:focus,
 .contacts-link:focus {
   color: var(--accent-color);
   line-height: 1.14;
   letter-spacing: 0.02em;
 }
 
-.nav-link.current::after {
+.nav__link.current {
+  color: var(--accent-color);
+  position: relative;
+}
+
+.nav__link.current::after {
   content: '';
 
   position: absolute;
@@ -81,7 +86,7 @@ nav {
   transition: transform 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
-.nav-link.current:hover::after {
+.nav__link.current:hover::after {
   transform: scaleX(1.5);
 }
 
@@ -92,8 +97,12 @@ nav {
   text-decoration: none;
   display: block;
 
+  padding-top: 32px;
+  padding-bottom: 32px;
+
   transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
+
 .contacts {
   display: flex;
   align-items: center;
@@ -108,33 +117,28 @@ nav {
   margin-left: 50px;
 }
 
-.contacts-link {
-  padding-top: 32px;
-  padding-bottom: 32px;
-}
-
 .contacts-link.mail-icon {
   display: flex;
 }
 
-.contacts-icon-mail {
+.contacts-link__icon-mail {
   display: inline-flex;
   width: 16px;
   height: 12px;
   margin-right: 10px;
   fill: var(--primary-text-color);
 }
-.contacts-icon-phone {
+.contacts-link__icon-phone {
   width: 10px;
   height: 16px;
   margin-right: 10px;
 }
 
-.contacts-icon-mail:hover,
-.contacts-icon-mail:focus,
-.contacts-icon-phone:hover,
-.contacts-icon-phone:focus,
-.contacts-icon-mail,
-.contacts-icon-phone {
+.contacts-link__icon-mail:hover,
+.contacts-link__icon-mail:focus,
+.contacts-link__icon-phone:hover,
+.contacts-link__icon-phone:focus,
+.contacts-link__icon-mail,
+.contacts-link__icon-phone {
   fill: currentColor;
 }

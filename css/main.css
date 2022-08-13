@@ -21,6 +21,17 @@
   border: 0;
 }
 
+.footer-form-button {
+  align-items: center;
+  text-align: center;
+}
+
+.clients-list-link, .features-icons, .modal-close-button {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
 .page {
   background-color: var(--primary-white-color);
   color: var(--title-text-color);
@@ -158,7 +169,7 @@ button {
   margin-bottom: 20px;
 }
 
-.footer-input {
+.subs-form__input {
   width: 358px;
   height: 50px;
   padding-left: 16px;
@@ -170,14 +181,14 @@ button {
   color: var(--primary-white-color);
   transition: border-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
-.footer-input:focus {
+.subs-form__input:focus {
   border-color: var(--secondary-background-color);
 }
 
 .footer-form::placeholder {
-  font-weight: 400;
   font-size: 16px;
-  line-height: 20px;
+  font-weight: 400;
+  line-height: 1.25;
   display: flex;
   align-items: center;
   letter-spacing: 0.03em;
@@ -193,11 +204,9 @@ button {
   margin-left: 12px;
   width: 200px;
   height: 50px;
-  font-weight: 700;
   font-size: 16px;
-  line-height: 1.9;
-  align-items: center;
-  text-align: center;
+  font-weight: 700;
+  line-height: 1.875;
   letter-spacing: 0.06em;
   color: var(--primary-white-color);
   background-color: var(--accent-color);
@@ -209,7 +218,7 @@ button {
   background-color: var(--secondary-accent-color);
 }
 
-.footer-form-icon {
+.footer-form-button__icon {
   position: absolute;
   width: 24px;
   height: 24px;
@@ -252,9 +261,6 @@ button {
 
 .modal-close-button {
   position: absolute;
-  display: flex;
-  align-items: center;
-  justify-content: center;
   padding: 0;
   top: 8px;
   right: 8px;
@@ -282,9 +288,9 @@ button {
 .modal-form-title {
   margin-bottom: 12px;
   height: 23px;
-  font-weight: 700;
   font-size: 20px;
-  line-height: 1.5;
+  font-weight: 700;
+  line-height: 1.15;
   letter-spacing: 0.03em;
   color: var(--title-text-color);
 }
@@ -450,7 +456,7 @@ nav {
   align-items: center;
 }
 
-.nav-lists:not(:last-child) {
+.nav__lists:not(:last-child) {
   margin-right: 50px;
 }
 
@@ -470,12 +476,12 @@ nav {
   word-spacing: -6px;
 }
 
-.desc {
+.logo__desc {
   color: #000000;
   font-family: Raleway, sans-serif;
 }
 
-.nav-link {
+.nav__link {
   display: block;
   padding-top: 32px;
   padding-bottom: 32px;
@@ -483,27 +489,28 @@ nav {
   line-height: 1.14;
   letter-spacing: 0.02em;
   text-decoration: none;
-}
-
-.nav-link {
   cursor: pointer;
   transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
-.nav-link.current {
+.nav__link:hover, .nav__link:focus {
   color: var(--accent-color);
-  position: relative;
+  line-height: 1.14;
+  letter-spacing: 0.02em;
 }
 
-.nav-link:hover,
 .contacts-link:hover,
-.nav-link:focus,
 .contacts-link:focus {
   color: var(--accent-color);
   line-height: 1.14;
   letter-spacing: 0.02em;
 }
 
-.nav-link.current::after {
+.nav__link.current {
+  color: var(--accent-color);
+  position: relative;
+}
+
+.nav__link.current::after {
   content: "";
   position: absolute;
   bottom: 0;
@@ -514,7 +521,7 @@ nav {
   transition: transform 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
-.nav-link.current:hover::after {
+.nav__link.current:hover::after {
   transform: scaleX(1.5);
 }
 
@@ -524,6 +531,8 @@ nav {
   letter-spacing: 0.02em;
   text-decoration: none;
   display: block;
+  padding-top: 32px;
+  padding-bottom: 32px;
   transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
@@ -542,16 +551,11 @@ nav {
   margin-left: 50px;
 }
 
-.contacts-link {
-  padding-top: 32px;
-  padding-bottom: 32px;
-}
-
 .contacts-link.mail-icon {
   display: flex;
 }
 
-.contacts-icon-mail {
+.contacts-link__icon-mail {
   display: inline-flex;
   width: 16px;
   height: 12px;
@@ -559,18 +563,18 @@ nav {
   fill: var(--primary-text-color);
 }
 
-.contacts-icon-phone {
+.contacts-link__icon-phone {
   width: 10px;
   height: 16px;
   margin-right: 10px;
 }
 
-.contacts-icon-mail:hover,
-.contacts-icon-mail:focus,
-.contacts-icon-phone:hover,
-.contacts-icon-phone:focus,
-.contacts-icon-mail,
-.contacts-icon-phone {
+.contacts-link__icon-mail:hover,
+.contacts-link__icon-mail:focus,
+.contacts-link__icon-phone:hover,
+.contacts-link__icon-phone:focus,
+.contacts-link__icon-mail,
+.contacts-link__icon-phone {
   fill: currentColor;
 }
 
@@ -618,13 +622,10 @@ nav {
 }
 
 .features-icons {
-  display: flex;
   height: 120px;
   background: #f5f4fa;
   border-radius: 4px;
   margin-bottom: 30px;
-  justify-content: center;
-  align-items: center;
 }
 
 .icon-features {
@@ -787,9 +788,6 @@ nav {
 }
 
 .clients-list-link {
-  display: flex;
-  justify-content: center;
-  align-items: center;
   transition: fill 250ms cubic-bezier(0.4, 0, 0.2, 1), border 250ms cubic-bezier(0.4, 0, 0.2, 1);
   border: 1px solid #afb1b8;
   border-radius: 4px;
@@ -808,9 +806,7 @@ nav {
 .clients-icon:hover, .clients-icon:focus {
   fill: var(--accent-color);
 }
-
-.clients-list-link:hover .clients-icon,
-.clients-list-link:focus .clients-icon {
+.clients-list-link:hover .clients-icon, .clients-list-link:focus .clients-icon {
   fill: var(--accent-color);
 }
 
@@ -893,7 +889,7 @@ nav {
   transform: translate(0);
 }
 
-.desc-footer {
+.logo-footer__desc {
   color: var(--primary-white-color);
 }
 
@@ -984,7 +980,7 @@ address {
   background-color: var(--accent-color);
 }
 
-.socials-icon {
+.footer-socials-link__icon {
   width: 20px;
   height: 20px;
   fill: var(--primary-white-color);

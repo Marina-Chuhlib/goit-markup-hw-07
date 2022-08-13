@@ -20,14 +20,13 @@
 
 
 .features-icons {
-  display: flex;
+  @extend %display-align;
+
+  
   height: 120px;
   background: #f5f4fa;
   border-radius: 4px;
   margin-bottom: 30px;
-
-  justify-content: center;
-  align-items: center;
 }
 
 .icon-features {

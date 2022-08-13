@@ -1,6 +1,7 @@
-.desc-footer {
+.logo-footer__desc {
   color: var(--primary-white-color);
 }
+
 .footer {
   display: block;
   display: flex;
@@ -91,13 +92,10 @@ address {
   &:focus {
     background-color: var(--accent-color);
   }
-
 }
 
-.socials-icon {
+.footer-socials-link__icon {
   width: 20px;
   height: 20px;
   fill: var(--primary-white-color);
 }
-
-
