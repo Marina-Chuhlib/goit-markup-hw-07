@@ -15,9 +15,7 @@
   &:nth-child(4n) {
     margin-right: 0;
   }
-
 }
-
 
 .section.our-teem {
   background-color: var(--secondary-background-color);
@@ -66,7 +64,6 @@
   &:focus {
     background-color: var(--accent-color);
   }
-
 }
 
 .socials_lists {
@@ -81,16 +78,14 @@
   height: 20px;
 
   transition: fill 250ms cubic-bezier(0.4, 0, 0.2, 1);
+
+  .social-list-link:hover &,
+  .social-list-link:focus & {
+    fill: var(--primary-white-color);
+  }
 }
 
 .socials_lists:hover .social-list-link {
   background-color: var(--accent-color);
   fill: var(--primary-white-color);
 }
-
-.social-list-link:hover .social-links,
-.social-list-link:focus .social-links {
-  fill: var(--primary-white-color);
-}
-
-
